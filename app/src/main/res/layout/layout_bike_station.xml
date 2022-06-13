@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_title"
+        android:textColor="@color/text_color_black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_half"
+        android:textSize="@dimen/text_body"
+        android:textColor="@color/text_color_black"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bike_station"
+        android:textSize="@dimen/text_body"
+        android:textColor="@color/text_color_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDistance"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"/>
+
+    <ImageView
+        android:id="@+id/imgBike"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_marginTop="@dimen/dimen_and_half"
+        app:srcCompat="@drawable/ic_bike"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuide"/>
+
+    <TextView
+        android:id="@+id/tvAvailableBikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_small"
+        android:text="@string/available_bikes"
+        android:textSize="@dimen/text_body"
+        android:textColor="@color/text_color_gray"
+        app:layout_constraintEnd_toEndOf="@+id/imgBike"
+        app:layout_constraintStart_toStartOf="@+id/imgBike"
+        app:layout_constraintTop_toBottomOf="@+id/imgBike" />
+
+    <TextView
+        android:id="@+id/tvAvailableBikesValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_big"
+        android:textColor="@color/text_color_green"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        app:layout_constraintEnd_toEndOf="@+id/imgBike"
+        app:layout_constraintStart_toStartOf="@+id/imgBike"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvailableBikes" />
+
+    <ImageView
+        android:id="@+id/imgPlace"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        app:srcCompat="@drawable/ic_lock"
+        app:layout_constraintTop_toTopOf="@+id/imgBike"
+        app:layout_constraintStart_toEndOf="@+id/centerGuide"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvAvailablePlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_small"
+
+        android:text="@string/available_places"
+        android:textSize="@dimen/text_body"
+        android:textColor="@color/text_color_gray"
+        app:layout_constraintEnd_toEndOf="@+id/imgPlace"
+        app:layout_constraintStart_toStartOf="@+id/imgPlace"
+        app:layout_constraintTop_toBottomOf="@+id/imgPlace" />
+
+    <TextView
+        android:id="@+id/tvAvailablePlacesValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_big"
+        android:textColor="@color/text_color_gray"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        app:layout_constraintEnd_toEndOf="@+id/imgPlace"
+        app:layout_constraintStart_toStartOf="@+id/imgPlace"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvailablePlaces" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

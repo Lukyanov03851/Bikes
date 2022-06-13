@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bikes</string>
+    <string name="available_bikes">Available bikes</string>
+    <string name="available_places">Available places</string>
+    <string name="bike_station">Bike station</string>
+    <string name="action_cancel">Cancel</string>
+
+</resources>
